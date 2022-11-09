@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="date"
+            type="String" />
+        <variable
+            name="info"
+            type="String" />
+        <variable
+            name="type"
+            type="android.graphics.Typeface" />
+        <variable
+            name="oxy"
+            type="com.kd.appoxy.Oxy" />
+        <variable
+            name="ws"
+            type="com.kd.appoxy.WS" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="256px"
+        android:layout_height="96px"
+        android:background="#000"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView setFace="@{type}"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{date}"
+            android:textColor="#f00"
+            android:textSize="14px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="负氧离子"
+                    android:textColor="#0f0"
+                    android:textSize="20px" />
+
+                <TextView setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="@{oxy.oxy}"
+                    android:textColor="#ff0"
+                    android:textSize="18px" />
+
+                <TextView setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{info}"
+                    android:textColor="#0f0"
+                    android:textSize="12px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="温度"
+                    android:textColor="#fff"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.5" />
+
+                <TextView setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="湿度"
+                    android:textColor="#fff"
+                    android:textSize="16px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+                <TextView setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{ws.wd}"
+                    android:textColor="#ff0"
+                    android:textSize="20px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    setFace="@{type}"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{ws.sd}"
+                    android:textColor="#ff0"
+                    android:textSize="20px" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
